@@ -23,14 +23,13 @@ const destroyBtn = document.querySelector('button[data-destroy]');
 const imputEl = document.querySelector('#controls > input');
 const divBox = document.querySelector('#boxes');
 
-
 function createBoxes(amount) {
   for (let i = 0; i < amount; i += 1) {
-    const div = document.createElement("div");
-  div.style.width = (i * 10 + 30) +`px`;
-  div.style.height = (i * 10 + 30) +`px`;
+    const div = document.createElement('div');
+    div.style.width = i * 10 + 30 + `px`;
+    div.style.height = i * 10 + 30 + `px`;
     div.style.backgroundColor = getRandomHexColor();
-      divBox.append(div);
+    divBox.append(div);
   }
 }
 

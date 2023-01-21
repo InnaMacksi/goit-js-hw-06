@@ -28,21 +28,20 @@
   border-color: #f44336;
 }
 */
-const inputEl = document.querySelector("#validation-input");
+const inputEl = document.querySelector('#validation-input');
 
-inputEl.addEventListener("click", handleInputClick);
+inputEl.addEventListener('click', handleInputClick);
 function handleInputClick(event) {
-    inputEl.classList.add("invalid")
+  inputEl.classList.add('invalid');
 }
 
 const textLength = Number(inputEl.dataset.length);
 
-inputEl.addEventListener("blur", handleInputValidity);
+inputEl.addEventListener('blur', handleInputValidity);
 
 function handleInputValidity(event) {
-    if (event.currentTarget.value.length === textLength)
-    {inputEl.classList.replace('invalid', 'valid')
-    }
-    // else { inputEl.classList.replace('#validation-input', '#validation-input.invalid') }
-};
-
+  if (event.currentTarget.value.length === textLength) {
+    inputEl.classList.replace('invalid', 'valid');
+  }
+  // else { inputEl.classList.replace('#validation-input', '#validation-input.invalid') }
+}

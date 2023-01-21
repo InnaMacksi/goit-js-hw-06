@@ -23,14 +23,7 @@ const ingredients = [
 Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 */
 
-const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
-];
+const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
 const ingredientsList = document.querySelector('#ingredients');
 // =============1 варіант==============
 // ingredients.forEach((ingredient) => {
@@ -46,4 +39,4 @@ const list = ingredients.map(ingredient => {
   ingredientsItems.textContent = ingredient;
   return ingredientsItems;
 });
-  ingredientsList.append(...list);
+ingredientsList.append(...list);

@@ -28,20 +28,20 @@ const form = document.querySelector('.login-form');
 form.addEventListener('submit', handleFormSabmit);
 
 function handleFormSabmit(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const formElements = event.currentTarget.elements;
-    const email = formElements.email.value;
-    const password = formElements.password.value;
+  const formElements = event.currentTarget.elements;
+  const email = formElements.email.value;
+  const password = formElements.password.value;
 
-    if (formElements.email.value !== '' && formElements.password.value !== '') {
-        const formData = {
-            email,
-            password,
-        }
-        console.log(formData);
-    } else {
-        alert("Увага! Усі поля повинні бути заповненими!");
-    }
-    form.reset()
+  if (formElements.email.value !== '' && formElements.password.value !== '') {
+    const formData = {
+      email,
+      password,
+    };
+    console.log(formData);
+  } else {
+    alert('Увага! Усі поля повинні бути заповненими!');
+  }
+  form.reset();
 }

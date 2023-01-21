@@ -25,16 +25,15 @@ const images = [
   },
 ];
 
-const galleryList = document.querySelector(".gallery");
+const galleryList = document.querySelector('.gallery');
 
 const galleryImg = images
-  .map((image) => `<li><img src=${image.url} alt=${image.alt} width = 1000/></li>`)
-  .join("");
+  .map(image => `<li><img src=${image.url} alt=${image.alt} width = 1000/></li>`)
+  .join('');
 
-galleryList.insertAdjacentHTML("beforeend", galleryImg);    
+galleryList.insertAdjacentHTML('beforeend', galleryImg);
 
-galleryList.style.display = "flex";
-galleryList.style.flexDirection = "column";
-galleryList.style.alignItems = "center";
-galleryList.style.listStyle = "none";
-
+galleryList.style.display = 'flex';
+galleryList.style.flexDirection = 'column';
+galleryList.style.alignItems = 'center';
+galleryList.style.listStyle = 'none';
