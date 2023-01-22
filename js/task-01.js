@@ -20,9 +20,15 @@ Elements: 5
 const listEl = document.querySelectorAll('#categories .item');
 console.log(`Number of categories: ${listEl.length}`);
 
-listEl.forEach(categoryEl => {
-  console.log(`Category: ${categoryEl.querySelector('h2').textContent}`);
-  console.log(`Elements: ${categoryEl.querySelectorAll('li > ul >li').length}`);
-});
+// listEl.forEach(categoryEl => {
+//   console.log(`Category: ${categoryEl.querySelector('h2').textContent}`);
+//   console.log(`Elements: ${categoryEl.querySelectorAll('li > ul >li').length}`);
+// });
 
 // ========================================================
+
+
+listEl.forEach(categoryEl => {
+  console.log(`Category: ${categoryEl.firstElementChild.textContent}`);
+  console.log(`Elements: ${categoryEl.lastElementChild.querySelectorAll('li').length}`);
+});

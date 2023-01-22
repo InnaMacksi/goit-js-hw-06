@@ -24,13 +24,16 @@ const imputEl = document.querySelector('#controls > input');
 const divBox = document.querySelector('#boxes');
 
 function createBoxes(amount) {
+  let box = [];
+
   for (let i = 0; i < amount; i += 1) {
     const div = document.createElement('div');
     div.style.width = i * 10 + 30 + `px`;
     div.style.height = i * 10 + 30 + `px`;
     div.style.backgroundColor = getRandomHexColor();
-    divBox.append(div);
+    box.push(div);
   }
+  divBox.append(...box);
 }
 
 createBtn.addEventListener('click', calcAmount);
