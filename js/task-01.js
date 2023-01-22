@@ -17,8 +17,8 @@ Category: Technologies
 Elements: 5
 */
 
-const listEl = document.querySelectorAll('#categories .item');
-console.log(`Number of categories: ${listEl.length}`);
+// const listEl = document.querySelectorAll('#categories .item');
+// console.log(`Number of categories: ${listEl.length}`);
 
 // listEl.forEach(categoryEl => {
 //   console.log(`Category: ${categoryEl.querySelector('h2').textContent}`);
@@ -27,8 +27,16 @@ console.log(`Number of categories: ${listEl.length}`);
 
 // ========================================================
 
-
-listEl.forEach(categoryEl => {
-  console.log(`Category: ${categoryEl.firstElementChild.textContent}`);
-  console.log(`Elements: ${categoryEl.lastElementChild.querySelectorAll('li').length}`);
+// listEl.forEach(categoryEl => {
+//   console.log(`Category: ${categoryEl.firstElementChild.textContent}`);
+//   console.log(`Elements: ${categoryEl.lastElementChild.querySelectorAll('li').length}`);
+// });
+// ========================================
+const categories = document.querySelectorAll('.item');
+console.log(`Number of categories`, categories.length);
+console.log('');
+categories.forEach(element => {
+  console.log('Category:', element.firstElementChild.textContent);
+  console.log('Category:', element.lastElementChild.children.length);
+  console.log('');
 });
